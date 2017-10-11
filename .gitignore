@@ -21,3 +21,6 @@
 /yarn-error.log
 
 .byebug_history
+
+# Put secrets.yml file in gitigoner
+/config/secrets.yml
