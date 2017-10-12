@@ -1,9 +1,12 @@
 <h1>Projects</h1>
 
+<%= link_to 'New', new_project_path %>
+
 <% @projects.each do |project| %>
-  <p></p><%= project.title %></p>
-  <%= link_to 'Edit', edit_project_path(project) %>
-  <p></p><%= project.subtitle %></p>
-  <p></p><%= project.body %></p>
+  <p><%= link_to project.title, project_path(project) %>
+  <p><%= project.subtitle %></p>
+  <p><%= project.body %></p>
   <%= image_tag project.thumb_image if !project.thumb_image.nil? %>
+  <br>
+  <%= link_to 'Edit', edit_project_path(project) %>
 <% end %>

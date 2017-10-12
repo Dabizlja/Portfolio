@@ -1,1 +1,8 @@
-<h1>SHow projects</h1>
+<h1>Show projects</h1>
+
+<p><%= @project.title %></p>
+<p><%= @project.subtitle %></p>
+<p><%= @project.body %></p>
+<%= image_tag @project.thumb_image if !@project.thumb_image.nil? %>
+
+<%= link_to 'Back', projects_path %>
