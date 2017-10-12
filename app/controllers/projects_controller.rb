@@ -1,11 +1,18 @@
 class ProjectsController < ApplicationController
+  before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   def index
     @projects = Project.all
   end
 
+  def show
+  end
+
   def new
     @project = Project.new
+  end
+
+  def edit
   end
 
   def create
@@ -16,9 +23,20 @@ class ProjectsController < ApplicationController
       else
         format.html { render :new }
       end
-    end
-    
+    end 
   end
+
+  def update
+    respond_to do |format|
+      if @project.update(project_params)
+        format.html { redirect_to @project, notice: "Succesfully updated" }
+      else
+        format.html { render :new }
+      end
+    end
+  end
+
+  
 
 
   private
