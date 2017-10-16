@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :projects, except: [:show]
+  resources :projects
   get 'project/:id', to: 'projects#show', as: 'project_show'
 
   get 'about', to: 'pages#about'
