@@ -1,6 +1,6 @@
 class Topic < ApplicationRecord
-  has_many :blogs
-
   validates_presence_of :title
+
+  has_many :blogs
 end
  

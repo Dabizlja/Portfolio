@@ -56,5 +56,12 @@ end
 
 puts "Created 9 projects."
 
+3.times do |tech|
+  Project.last.technologies.create!(
+    name: "Ruby #{tech}"
+  )
+end
+
+puts "Created 3 technologies."
 
 
