@@ -5,4 +5,8 @@
 <p><%= @project.body %></p>
 <%= image_tag @project.main_image if !@project.main_image.nil? %>
 
+<h2>Technologies used:</h2>
+<% @project.technologies.each do |tech| %>
+  <p><%= tech.name %></p>
+<% end %>
 <%= link_to 'Back', projects_path %>
