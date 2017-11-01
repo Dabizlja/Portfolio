@@ -32,6 +32,9 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'friendly_id', '~> 5.2', '>= 5.2.3'
 
+#gem devise for authentication
+gem 'devise', '~> 4.3'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
