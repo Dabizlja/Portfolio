@@ -1,5 +1,6 @@
-<h1>Hello <%= current_user.first_name if current_user %></h1>
+<h1>Hello <%= current_user.first_name %></h1>
 <p>Find me in app/views/pages/home.html.erb</p>
-<p><%= link_to "Login", new_user_session_path %></p>
-<p><%= link_to "Logut", destroy_user_session_path, method: :delete %></p>
+
 <%= @skills.inspect %>
+
+<p><%= current_user.class %></p>
